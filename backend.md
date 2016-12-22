@@ -2,7 +2,7 @@
 
 ## Purpose
 This API is a REST webservice intended for the customer to create and destroy VMRs (Virtual Meetng Rooms).
-There is also a swagger definition available.
+There is also a swagger definition available. This can be viewed at http://editor.swagger.io/#/
 
 
 ## Required data for Access

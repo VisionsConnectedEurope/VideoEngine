@@ -1,0 +1,156 @@
+swagger: '2.0'
+info:
+  title: VideoEngine Middleware API
+  version: "0.0.5"
+  description: |
+    This API enables integrators to create video meeting rooms (VMR's).
+    The API is provided as a REST webservice using JSON.
+
+    The webservice exposing the API enforces the use of HTTPS.
+    Requests made via HTTP will be redirected to HTTPS.
+    Requests to the backend webservice without authentication will always fail.
+
+host: engine.visionsconnected.com
+basePath: /video-engine/api/backend/v1
+schemes:
+  - https
+
+securityDefinitions:
+  BackendAuthentication:
+    type: basic
+    description: |
+      To be able to use the API you need to use a Customer ID and
+      an API key in each request to the backend webservice.
+      This information is used to authenticate your account.
+
+      The Customer ID and API key are provided to you by your VisionsConnected
+      account manager.
+      Make sure to keep these values secret.
+      Do not use them in front-end code or share them in code that is publicly accessible.
+
+      Authentication to the API is performed using HTTP Basic Authentication.
+      Provide your Customer ID as the basic auth username value and
+      the API key as password.
+
+paths:
+  /vmrs:
+    post:
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      summary:
+        Creates a new virtual meeting room
+      description: |
+        Creates a virtual meeting room (VMR)
+
+        The returned VMR Reference can be distributed to the
+        frontend application (either web or app) by any conceivable method
+        (e-mail, HTTP, SMS, push, etc.).
+      responses:
+        200:
+          description: Created VMR
+          schema:
+            $ref: '#/definitions/VMR'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+      security:
+        - BackendAuthentication: []
+      tags:
+        - VMR's
+
+  /vmrs/{vmrReference}:
+    get:
+      produces:
+        - application/json
+      summary:
+        Returns the current information of a virtual meeting room
+      description: |
+        Returns the current information of a specific virtual meeting room
+      parameters:
+        - name: vmrReference
+          in: path
+          description: Reference of the VMR for which to return the information
+          required: true
+          type: string
+      responses:
+        200:
+          description: VMR information
+          schema:
+            $ref: '#/definitions/VMR'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+      security:
+        - BackendAuthentication: []
+      tags:
+        - VMR's
+
+    delete:
+      summary:
+        Deletes a virtual meeting room
+      description: |
+        Deletes the virtual meeting room (VMR) with specified Reference.
+        Deleted VMR's can no longer be used or accessed through the API.
+      parameters:
+        - name: vmrReference
+          in: path
+          description: Reference of the VMR to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: VMR successfully deleted
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+      security:
+        - BackendAuthentication: []
+      tags:
+        - VMR's
+
+definitions:
+
+  Error:
+    type: object
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        description: Error code
+      message:
+        type: string
+        description: Error message
+  VMR:
+    type: object
+    required:
+      - reference
+      - hostPIN
+      - guestPIN
+    properties:
+      reference:
+        type: string
+        description: Unique reference of VMR
+      hostPIN:
+        type: string
+        description:
+          PIN code used by the host
+      guestPIN:
+        type: string
+        description:
+          PIN code used by the guests
+      activeHosts:
+        type: integer
+        description:
+          Number of active host participants. Not given on creation.
+      activeGuests:
+        type: integer
+        description:
+          Number of active guest participants. Not given on creation.
+
