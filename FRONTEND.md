@@ -1,11 +1,4 @@
-# VC VideoEngine
-With the Video Engine VisionsConnected provides VaaS via an API. Video is the new voice and videoconferencing is no longer seen as a standalone solution. With the Video Engine customers can integrate videoconferencing in Apps or via Web in browsers.
-
-The VideoEngine service has two api's:
-- Backend REST API: room and participant management
-- Frontend JS API: makes a connection to the room
-
-The backend REST API is described in the backend swagger spec. This file is only about the Frontend JS API.
+# Frontend
 
 ## Technologies
 The VideoEngine is flexible in using the technologies that the browser supports. It will choose according to the situation what technology will be preferable to set-up a video connection.
@@ -53,7 +46,7 @@ To get started, simply add the following javascript and css to your page.
 
 **NOTICE: Don't include the main.js in your asset pipeline, it can break!!!** Load the files from the visionsconnected domain to have the best compatibility.
 
-Or you can checkout the **sample-project**.
+Or you can checkout the [frontend sample project](../blob/master/frontend-sample-project)
 
 ## VideoEngine API
 The VideoEngine has a set of configuration options and functions developer can use to start video calling. They are described below.
