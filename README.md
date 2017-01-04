@@ -1,5 +1,5 @@
 # VC VideoEngine
-VisionsConnected focused on a solution that makes it easy for developers and end-users to setup a video conference. From that perspective the service VideoEngine was created with as little complexity as possible. As a developer you do not have to worry about different browsers and technologies. The VideoEngine works in all major browsers.
+With the Video Engine VisionsConnected provides VaaS via an API. Video is the new voice and videoconferencing is no longer seen as a standalone solution. With the Video Engine customers can integrate videoconferencing in Apps or via Web in browsers.
 
 The VideoEngine service has two api's:
 - Backend REST API: room and participant management
