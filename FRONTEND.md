@@ -46,7 +46,7 @@ To get started, simply add the following javascript and css to your page.
 
 **NOTICE: Don't include the main.js in your asset pipeline, it can break!!!** Load the files from the visionsconnected domain to have the best compatibility.
 
-Or you can checkout the [frontend sample project](../blob/master/frontend-sample-project)
+Or you can checkout the [frontend sample project](https://github.com/VisionsConnectedEurope/VideoEngine/tree/master/frontend-sample-project)
 
 ## VideoEngine API
 The VideoEngine has a set of configuration options and functions developer can use to start video calling. They are described below.
