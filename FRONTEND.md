@@ -177,27 +177,3 @@ Each of the icons has a class *.ve-control* and this can be used to override the
   border-radius: 0;
 }
 ```
-
-## Sample Project
-For your convinience, VisionsConnected provides you with a sample project to quickly get you up and running.
-
-### Prequisites
-This project requires:
-* Nodejs (https://nodejs.org/en/)
-
-### Getting Started
-Have you checked the prerequisites?
-```sh
-git clone https://github.com/visionsconnected/video-engine.git my-app
-cd my-app
-npm install
-npm start
-```
-The application is running on port 8000. You can navigate in your browser to https://localhost:8000 to view it.
-
-### What to do next?
-Now that you have the application running with working video, here are some ideas to get you started in getting familiar with the VideoEngine.
-- Update the callConfig in scripts.js to use the correct vmrId and displayName.
-- Turn on debugging to see what is happening.
-- Update the styling to match your organisation's.
-- Build it in your own application

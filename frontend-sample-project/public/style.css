@@ -1,0 +1,118 @@
+/* Standardizers */
+
+* {
+  outline: none !important;
+}
+
+/* NAVIGATION */
+.top-bar {
+  height: 10px;
+  background: #f18800;
+}
+
+
+.navbar .navbar-brand>img {
+  height: 30px;
+}
+
+.navbar-nav>li>a {
+  line-height: 30px;
+  color: #7f7773;
+  font-size: 12px;
+}
+
+.navbar-nav>li.active>a {
+  font-weight: bold;
+  color: #f18800
+}
+
+.navbar-nav>li.active>a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 9.5px 0 9.5px;
+  border-color: #f18800 transparent transparent transparent;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background: none;
+}
+
+
+/* VIDEO ENGINE*/
+#video-engine-container {
+  background: #CCC;
+  position: relative;
+  text-align: center;
+}
+
+#video-engine {
+  width: 100%;
+  height: 584px;
+}
+
+#controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  z-index: 10;
+  margin: 24px;
+}
+
+#download-jabberguest {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  margin: 24px;
+}
+
+#controls, #download-jabberguest {
+  display: none;
+}
+
+#jabberguest-icon {
+  height: 128px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+#cancel-call {
+  display: none;
+}
+
+#video-engine-container .call-connecting {
+  display: none;
+}
+
+#video-engine-container .call-connecting .spinner {
+  line-height: 584px;
+  font-size: 112px;
+}
+
+#video-engine-container .call-connecting .spinner-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+/* ICONS */
+#video-engine-container .ve-controls > .ve-control:not(#ve-disconnect) {
+  background: white;
+  color: #333;
+}
+
+#video-engine-container .ve-controls > .ve-control:hover {
+  opacity: 0.9;
+}
