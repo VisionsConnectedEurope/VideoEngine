@@ -15,7 +15,7 @@ The Customer ID and API key are provided to you by your VisionsConnected account
 Make sure to keep these values secret. Do not use them in front-end code or share them in code that is publicly accessible.
 
 ## API url
-The API url is https://engine.visionsconnected.com/video-engine/api/backend/v1
+The API base url is https://engine.visionsconnected.com/video-engine/api/backend/v1
 
 ## Authentication
 All requests to the API must be authenticated using HTTP Basic Authentication.
@@ -35,7 +35,7 @@ Name | Create VMR
 purpose | Creates a virtual meeting room (VMR)
 HTTP-method | POST
 content-type | application/json
-url | api-base-url/vmrs
+url | https://engine.visionsconnected.com/video-engine/api/backend/v1/vmrs
 
 **response**
 The response is a json structure like:
@@ -74,7 +74,7 @@ Name | Delete VMR
 purpose | Deletes the virtual meeting room (VMR) with specified Reference. Deleted VMR's can no longer be used or accessed through the API
 HTTP-method | DELETE
 content-type | application/json
-url | api-base-url/vmrs/{vmrReference}
+url | https://engine.visionsconnected.com/video-engine/api/backend/v1/vmrs/{vmrReference}
 parameters | {vmrReference} The reference returned by the Create VMR
 
 **response**
@@ -89,7 +89,7 @@ Name | get VMR state
 purpose | Retrieves the current state of a virtual meeting room (VMR)
 HTTP-method | GET
 content-type | application/json
-url | api-base-url/vmrs/{vmrReference}
+url | https://engine.visionsconnected.com/video-engine/api/backend/v1/vmrs/{vmrReference}
 parameters | {vmrReference} The reference returned by the Create VMR
 
 **response**
