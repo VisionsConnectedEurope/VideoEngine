@@ -15,9 +15,7 @@ The Customer ID and API key are provided to you by your VisionsConnected account
 Make sure to keep these values secret. Do not use them in front-end code or share them in code that is publicly accessible.
 
 ## API url
-video-engine-url: https://engine.visionsconnected.com/video-engine
-api-base-url: {video-engine-url}/api/backend/v1
-So, the complete **api-base-url** would be : https://engine.visionsconnected.com/video-engine/api/backend/v1
+The API url is https://engine.visionsconnected.com/video-engine/api/backend/v1
 
 ## Authentication
 All requests to the API must be authenticated using HTTP Basic Authentication.
