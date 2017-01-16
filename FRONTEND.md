@@ -150,6 +150,7 @@ VideoEngine has the following icons:
 - Disconnect
 
 Each of the icons has a class *.ve-control* and this can be used to override the default VideoEngine styling. In addition, each icon has an unique id to add specific styling.
+
 | Name              | Id
 | ----------------- |:-------------:|
 | Audio mute/unmute | ve-audio-switch
