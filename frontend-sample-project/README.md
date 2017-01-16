@@ -8,8 +8,8 @@ This project requires:
 ### Getting Started
 Have you checked the prerequisites?
 ```sh
-git clone https://github.com/visionsconnected/video-engine.git my-app
-cd my-app
+git clone https://github.com/VisionsConnectedEurope/VideoEngine.git my-app
+cd my-app/frontend-sample-project
 npm install
 npm start
 ```
