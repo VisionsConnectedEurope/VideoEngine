@@ -18,7 +18,7 @@ Flash required a plugin to function and is available for most popular browsers. 
 **PIN required with JabberGuest**  
 When a user enters a video room, the user needs to provide a pincode. When using WebRTC and Flash this requirement is automatically handled by the VideoEngine and users do not need to enter a pincode manually. This is not support by JabberGuest and for JabberGuest users need to manually enter a pincode to access the video room. 
 
-**Styling**  
+**Styling not possible for JabberGuest**  
 With WebRTC and Flash the user interface can be styled to match your specific needs. Unfortunately this is not possible for JabberGuest.
 You can read more about styling in the section "styling".
 
