@@ -27,11 +27,11 @@ You can read more about styling in the section "styling".
 Browsers nowadays require https when a website is using webcam or microphone input from the user. For that reason, the VideoEngine also requires the use of https on your website, at least for the page where the video engine is included. In development you can use self-signed certificates and make use of openssl to get it working.
 
 ## Supported browsers 24-11-2016
-Chrome: 54
-Firefox: 50
-Safari: 10
-IE: 10 and 11
-Edge: 13
+Chrome: 54  
+Firefox: 50  
+Safari: 10  
+IE: 10 and 11  
+Edge: 13  
 
 ## Getting Started
 Did you check the requirements?
