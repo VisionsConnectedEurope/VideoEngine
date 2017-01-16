@@ -1,32 +1,30 @@
 # Frontend
 
 ## Technologies
-The VideoEngine is flexible in using the technologies that the browser supports. It will choose according to the situation what technology will be preferable to set-up a video connection.
+The VideoEngine will automatically determine the best technology to use in the browser for setting up the video connection. Several technologies are supported.
 
-### Different technologies
+### Supported technologies
 **JabberGuest by Cisco**  
-Cisco is a well-known player in the videotechnology market. They have a lot of experience and have a optimized plugin that is available for all popular browsers.
+Cisco is a well-known player in the video technology market. They have a lot of experience and have an optimized plugin that is available for many popular browsers.
 
 **WebRTC**  
 WebRTC is a free, open project that provides browsers and mobile applications with Real-Time Communications (RTC) capabilities via simple APIs (https://webrtc.org).
-Webrtc does not require the installation of an additional plugin and is supported in Chrome and Firefox.
+WebRTC does not require the installation of an additional plugin and is supported in Chrome and Firefox.
 
 **Flash**  
-Story about Flash
-Flash required a plugin to function and is available for all popular browsers. It isn't a populair choice, but sometimes its needed as a fallback when users already have flash installed and there browser doesn't support WebRTC.
+Flash required a plugin to function and is available for most popular browsers. It is no longer an obvious choice, but sometimes it's needed as a fallback when users already have flash installed and the browser doesn't support WebRTC or JabberGuest.
 
-### Impact
+### Limitations of supported technologies
+**PIN required with JabberGuest**  
+When a user enters a video room, the user needs to provide a pincode. When using WebRTC and Flash this requirement is automatically handled by the VideoEngine and users do not need to enter a pincode manually. This is not support by JabberGuest and for JabberGuest users need to manually enter a pincode to access the video room. 
 
-**PIN**
-For JabberGuest the user also need to enter a PIN. For the other technologies (WebRTC and Flash) the VideoEngine handles the authentication.
-
-**Interface**
-The design of the technologies are not equal.
-The WebRTC and Flash controls can be styled. Unfortunately this is not possible for JabberGuest.
+**Styling**  
+With WebRTC and Flash the user interface can be styled to match your specific needs. Unfortunately this is not possible for JabberGuest.
 You can read more about styling in the section "styling".
 
 ## Requirements
-There is one requirement that your site or webapplication need to have. The VideoEngine works only on ```https```. Browsers nowadays require https when a website is using webcam or microphone input from the user. In development you can use self-signed certificates and make use of openssl to get it working.
+**HTTPS**  
+Browsers nowadays require https when a website is using webcam or microphone input from the user. For that reason, the VideoEngine also requires the use of https on your website, at least for the page where the video engine is included. In development you can use self-signed certificates and make use of openssl to get it working.
 
 ## Supported browsers 24-11-2016
 Chrome: 54
@@ -44,12 +42,12 @@ To get started, simply add the following javascript and css to your page.
 <script src="https://engine.visionsconnected.com/video-engine/scripts/main.js"></script>
 ```
 
-**NOTICE: Don't include the main.js in your asset pipeline, it can break!!!** Load the files from the visionsconnected domain to have the best compatibility.
+**NOTICE: Don't include the main.js in your asset pipeline, it can break!!!** Load the files directly from the visionsconnected domain to have the best compatibility.
 
 Or you can checkout the [frontend sample project](https://github.com/VisionsConnectedEurope/VideoEngine/tree/master/frontend-sample-project)
 
 ## VideoEngine API
-The VideoEngine has a set of configuration options and functions developer can use to start video calling. They are described below.
+The VideoEngine has a set of configuration options and functions developers can use to customize video calling. They are described below.
 
 ### Video Engine Configuration
 The VideoEngine has two sets of configuration options. Initial configuration that is only required to be called once, and per-call configuration that changes with every call.
